@@ -256,7 +256,7 @@ public class Protagonist : MonoBehaviour {
                 velocity = 0;
                 if (jumping) {
                     jumping = false;
-                    Debug.Log(Time.time - testTimeJump);
+                    //Debug.Log(Time.time - testTimeJump);
                 }
             }
             else if (grounded && jumping)

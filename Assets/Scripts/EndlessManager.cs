@@ -71,27 +71,7 @@ public class EndlessManager : MonoBehaviour {
         activeAction = actionWheel[actionWheel.Length - 1];
         setAction();
 
-        switch (activeAction) {
-            case 0: //jump
-                StartCoroutine(GenerateObstacle(spikes));
-                setAction();
-                break;
-
-            case 1: //slide
-                StartCoroutine(GenerateObstacle(walls));
-                setAction();
-                break;
-
-                /*case 2: //shoot
-                    shoot();
-                    setAction();
-                    break;
-
-                case 3: //hookshot
-                    hookShot();
-                    setAction();
-                    break;*/
-        }
+        SwitchAction();
 
         this.enabled = false;
     }
@@ -112,6 +92,31 @@ public class EndlessManager : MonoBehaviour {
         index++;
         if (index == actionWheel.Length) {
             index = 0;
+        }
+    }
+
+    void SwitchAction() {
+        switch (activeAction) {
+            case 0: //jump
+                setAction();
+                StartCoroutine(GenerateObstacle(spikes));
+
+                break;
+
+            case 1: //slide
+                setAction();
+                StartCoroutine(GenerateObstacle(walls));
+                break;
+
+                /*case 2: //shoot
+                    shoot();
+                    setAction();
+                    break;
+
+                case 3: //hookshot
+                    hookShot();
+                    setAction();
+                    break;*/
         }
     }
 
@@ -186,28 +191,7 @@ public class EndlessManager : MonoBehaviour {
             yield return new WaitForSeconds(Random.Range(0f, 1f));
         }
 
-        switch (activeAction) {
-            case 0: //jump
-                setAction();
-                StartCoroutine(GenerateObstacle(spikes));
-                
-                break;
-
-            case 1: //slide
-                setAction();
-                StartCoroutine(GenerateObstacle(walls));
-                break;
-
-                /*case 2: //shoot
-                    shoot();
-                    setAction();
-                    break;
-
-                case 3: //hookshot
-                    hookShot();
-                    setAction();
-                    break;*/
-        }
+        SwitchAction();
     }
 
     public void EnqueueObstacle(GameObject obstacle) {

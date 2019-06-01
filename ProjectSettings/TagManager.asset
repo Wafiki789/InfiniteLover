@@ -10,6 +10,7 @@ TagManager:
   - EndlessManager
   - Spike
   - Wall
+  - Boulder
   layers:
   - Default
   - TransparentFX

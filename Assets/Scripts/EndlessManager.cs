@@ -13,14 +13,16 @@ public class EndlessManager : MonoBehaviour {
     //Prefabs
     public GameObject spike;
     public GameObject wall;
-    //public GameObject boulder;
+    public GameObject boulder;
 
 
     GameObject[] spikesArray;
     GameObject[] wallsArray;
+    GameObject[] bouldersArray;
 
     Queue<GameObject> spikes;
     Queue<GameObject> walls;
+    Queue<GameObject> boulders;
 
     //Probabilities
     public float wasteProbs;
@@ -51,15 +53,20 @@ public class EndlessManager : MonoBehaviour {
     void Awake() {
         spikesArray = GameObject.FindGameObjectsWithTag("Spike");
         wallsArray = GameObject.FindGameObjectsWithTag("Wall");
+        bouldersArray = GameObject.FindGameObjectsWithTag("Boulder");
 
         spikes = new Queue<GameObject>();
         walls = new Queue<GameObject>();
+        boulders = new Queue<GameObject>();
 
         for (int i = 0; i < spikesArray.Length; i++) {
             spikes.Enqueue(spikesArray[i]);
         }
         for (int i = 0; i < wallsArray.Length; i++) {
             walls.Enqueue(wallsArray[i]);
+        }
+        for (int i = 0; i < bouldersArray.Length; i++) {
+            boulders.Enqueue(bouldersArray[i]);
         }
 
         levelScript = level.GetComponent<Level>();
@@ -109,13 +116,12 @@ public class EndlessManager : MonoBehaviour {
                 StartCoroutine(GenerateObstacle(walls));
                 break;
 
-                /*case 2: //shoot
-                    shoot();
+                case 2: //shoot
                     setAction();
+                    StartCoroutine(GenerateObstacle(boulders));
                     break;
 
-                case 3: //hookshot
-                    hookShot();
+                /*case 3: //hookshot
                     setAction();
                     break;*/
         }
@@ -128,7 +134,6 @@ public class EndlessManager : MonoBehaviour {
         float randomNumber = Random.Range(1,100);
 
         if (randomNumber >= wasteProbs || wastedActionsInARow == actionWheel.Length - 1) {
-            //Instantiate(obstacle, startingPos, Quaternion.identity);
             if (obstacles.Count != 0) {
                 GameObject currentObstacle = obstacles.Dequeue();
                 currentObstacle.transform.position = startingPos;
@@ -144,7 +149,6 @@ public class EndlessManager : MonoBehaviour {
 
                         print(spikeLength + " " + timeAdjustment);
                     }
-                    //(GameObject obstacle, Queue<GameObject> obstacles, float smallerProbs, int max1, int max2)
                 }
             }
             else {

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
+  - Level
+  - Checkpoint
+  - EndlessManager
   layers:
   - Default
   - TransparentFX

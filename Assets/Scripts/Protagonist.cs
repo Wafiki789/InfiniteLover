@@ -55,6 +55,8 @@ public class Protagonist : MonoBehaviour {
 
     private float testTimeJump;
 
+    EndlessManager endlessScript;
+
 	void Awake () {
 		position = transform.position.y;
 		initialPos = transform.position;
@@ -74,6 +76,10 @@ public class Protagonist : MonoBehaviour {
 
 		runningSprite = transform.GetChild (0).gameObject;
 		slidingSprite = transform.GetChild (1).gameObject;
+
+        if (GameObject.FindGameObjectWithTag("EndlessManager") != null) {
+            endlessScript = GameObject.FindGameObjectWithTag("EndlessManager").GetComponent<EndlessManager>();
+        }
 	}
 
     void FixedUpdate(){
@@ -172,7 +178,6 @@ public class Protagonist : MonoBehaviour {
 				slidingSprite.SetActive (false);
 
 				if (velocity > minHeight) {
-					Debug.Log ("Min height");
 					minimalJump = true;
 				}
 				else if (!grounded && velocity > 0) {  // If character is still ascending in the jump velocityChange / 2
@@ -185,9 +190,6 @@ public class Protagonist : MonoBehaviour {
 			}
 
             //Handling the character's vertical positon
-			
-
-
 			if (goingUp && !pause) {
 				Vector3 pos = transform.position;
 				pos.y += 6f * Time.deltaTime;
@@ -316,15 +318,20 @@ public class Protagonist : MonoBehaviour {
 	}
 
 	public void respawn(){
-		float speedTemp = levelScript.speed;
-		levelScript.speed = 0f;
-		respawning = true;
-		goingUp = true;
-		velocity = 0;
-		grounded = false;
-		//backgroundScript.pause ();
-		Invoke ("rewind", 1f);
-
+        if (endlessScript == null) {
+            float speedTemp = levelScript.speed;
+            levelScript.speed = 0f;
+            respawning = true;
+            goingUp = true;
+            velocity = 0;
+            grounded = false;
+            //backgroundScript.pause ();
+            Invoke("rewind", 1f);
+        }
+        else {
+            respawning = true;
+            endlessScript.GameOver();
+        }
 	}
 
 	void rewind(){

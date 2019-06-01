@@ -15,6 +15,13 @@ public class EndlessManager : MonoBehaviour {
     public GameObject wall;
     //public GameObject boulder;
 
+
+    GameObject[] spikesArray;
+    GameObject[] wallsArray;
+
+    Queue<GameObject> spikes;
+    Queue<GameObject> walls;
+
     //Probabilities
     public float wasteProbs;
     public float minTimeBetweenObstacles;
@@ -35,6 +42,23 @@ public class EndlessManager : MonoBehaviour {
     float timeBeforeReset = 2f;
 
     void Awake() {
+        spikesArray = GameObject.FindGameObjectsWithTag("Spike");
+        wallsArray = GameObject.FindGameObjectsWithTag("Wall");
+
+        spikes = new Queue<GameObject>();
+        walls = new Queue<GameObject>();
+
+        print(spikesArray[0].transform.position);
+        print(spikesArray[0]);
+
+        for (int i = 0; i < spikesArray.Length; i++) {
+            print(spikesArray[i].transform.position);
+            spikes.Enqueue(spikesArray[i]);
+        }
+        for (int i = 0; i < wallsArray.Length; i++) {
+            walls.Enqueue(wallsArray[i]);
+        }
+
         levelScript = level.GetComponent<Level>();
         startingPos = startingAnchor.position;
         actionWheel = levelScript.giveActions();
@@ -43,12 +67,12 @@ public class EndlessManager : MonoBehaviour {
 
         switch (activeAction) {
             case 0: //jump
-                StartCoroutine(GenerateObstacle(spike));
+                StartCoroutine(GenerateObstacle(spikes));
                 setAction();
                 break;
 
             case 1: //slide
-                StartCoroutine(GenerateObstacle(wall));
+                StartCoroutine(GenerateObstacle(walls));
                 setAction();
                 break;
 
@@ -85,14 +109,21 @@ public class EndlessManager : MonoBehaviour {
         }
     }
 
-    IEnumerator GenerateObstacle(GameObject obstacle) {
+    IEnumerator GenerateObstacle(Queue<GameObject> obstacles) {
         bool wasted = false;
         float timeAdjustment = 0f;
 
         float randomNumber = Random.Range(1,100);
 
         if (randomNumber >= wasteProbs || wastedActionsInARow == actionWheel.Length - 1) {
-            Instantiate(obstacle, startingPos, Quaternion.identity, level.transform);
+            //Instantiate(obstacle, startingPos, Quaternion.identity);
+            if (obstacles.Count != 0) {
+                GameObject currentObstacle = obstacles.Dequeue();
+                currentObstacle.transform.position = startingPos;
+            }
+            else {
+                Debug.Log("Empty Queue!");
+            }
             wastedActionsInARow = 0;
         }
         else {
@@ -126,13 +157,13 @@ public class EndlessManager : MonoBehaviour {
         switch (activeAction) {
             case 0: //jump
                 setAction();
-                StartCoroutine(GenerateObstacle(spike));
+                StartCoroutine(GenerateObstacle(spikes));
                 
                 break;
 
             case 1: //slide
                 setAction();
-                StartCoroutine(GenerateObstacle(wall));
+                StartCoroutine(GenerateObstacle(walls));
                 break;
 
                 /*case 2: //shoot
@@ -144,6 +175,15 @@ public class EndlessManager : MonoBehaviour {
                     hookShot();
                     setAction();
                     break;*/
+        }
+    }
+
+    public void EnqueueObstacle(GameObject obstacle) {
+        if (obstacle.tag == "Spike") {
+            spikes.Enqueue(obstacle);
+        }
+        else if (obstacle.tag == "Wall") {
+            walls.Enqueue(obstacle);
         }
     }
 

@@ -8,6 +8,8 @@ TagManager:
   - Level
   - Checkpoint
   - EndlessManager
+  - Spike
+  - Wall
   layers:
   - Default
   - TransparentFX

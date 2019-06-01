@@ -26,6 +26,10 @@ public class EndlessManager : MonoBehaviour {
     public float wasteProbs;
     public float minTimeBetweenObstacles;
     public float maxTimeBetweenObstacles;
+    public float smallerWallsProbs;
+
+    public float smallGapTime;
+    public float mediumGapTime;
 
     public Transform startingAnchor;
     private Vector3 startingPos;
@@ -41,6 +45,8 @@ public class EndlessManager : MonoBehaviour {
     float timer = 0f;
     float timeBeforeReset = 2f;
 
+    private bool pressedSpace;
+
     void Awake() {
         spikesArray = GameObject.FindGameObjectsWithTag("Spike");
         wallsArray = GameObject.FindGameObjectsWithTag("Wall");
@@ -48,11 +54,7 @@ public class EndlessManager : MonoBehaviour {
         spikes = new Queue<GameObject>();
         walls = new Queue<GameObject>();
 
-        print(spikesArray[0].transform.position);
-        print(spikesArray[0]);
-
         for (int i = 0; i < spikesArray.Length; i++) {
-            print(spikesArray[i].transform.position);
             spikes.Enqueue(spikesArray[i]);
         }
         for (int i = 0; i < wallsArray.Length; i++) {
@@ -62,6 +64,10 @@ public class EndlessManager : MonoBehaviour {
         levelScript = level.GetComponent<Level>();
         startingPos = startingAnchor.position;
         actionWheel = levelScript.giveActions();
+        for (int i = 0; i < actionWheel.Length; i++) {
+            print(actionWheel[i]);
+        }
+
         activeAction = actionWheel[actionWheel.Length - 1];
         setAction();
 
@@ -93,11 +99,11 @@ public class EndlessManager : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             timer = Time.time;
+            pressedSpace = true;
         }
-        else if (Input.GetKey(KeyCode.Space) && Time.time - timer >= timeBeforeReset) {
+        else if (pressedSpace && Input.GetKey(KeyCode.Space) && Time.time - timer >= timeBeforeReset) {
             SceneManager.LoadScene("JumpSlideInfiniteGym");
         }
-        print("Timer" + timer);
     }
 
     public void setAction() {
@@ -120,9 +126,32 @@ public class EndlessManager : MonoBehaviour {
             if (obstacles.Count != 0) {
                 GameObject currentObstacle = obstacles.Dequeue();
                 currentObstacle.transform.position = startingPos;
+
+                if (currentObstacle.tag == "Wall") {
+                    float smallerWall = Random.Range(0, 100);
+                    int wallLength = 1;
+
+                    if (smallerWall < smallerWallsProbs) {
+                        wallLength = Random.Range(1, 4);
+                    }
+                    else {
+                        wallLength = Random.Range(1, 17);
+                    }
+
+                    float scaleX = currentObstacle.transform.localScale.x;
+                    Vector3 nextPos = startingPos;
+                    nextPos.x += scaleX;
+
+                    for (int i = 0; i < wallLength -1; i++) {
+                        currentObstacle = obstacles.Dequeue();
+                        currentObstacle.transform.position = nextPos;
+                        nextPos.x += scaleX;
+                        timeAdjustment += 0.07f;
+                    }
+                }
             }
             else {
-                Debug.Log("Empty Queue!");
+                Debug.LogError("Empty Queue!");
             }
             wastedActionsInARow = 0;
         }
@@ -132,7 +161,6 @@ public class EndlessManager : MonoBehaviour {
 
             //If we have to jump (0) right before a wall (1)
             if (lastAction == 0 && activeAction == 1) {
-                print("Jump after wall");
                 timeAdjustment = 0.5f;
             }
         }
@@ -141,13 +169,17 @@ public class EndlessManager : MonoBehaviour {
             float randomGapTime = Random.Range(0, 100);
             //print(randomGapTime);
 
-            if (randomGapTime < 30) {
+            if (randomGapTime < smallGapTime) {
+                randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1f);
+            }
+            else if (randomGapTime < mediumGapTime) {
                 randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1.5f);
             }
             else {
                 randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, maxTimeBetweenObstacles);
             }
             //print(randomGapTime);
+            print(timeAdjustment + " " + randomGapTime);
             yield return new WaitForSeconds(randomGapTime);
         }
         else {
@@ -191,5 +223,6 @@ public class EndlessManager : MonoBehaviour {
         gameOverUI.SetActive(true);
         this.enabled = true;
         levelScript.speed = 0f;
+        StopAllCoroutines();
     }
 }

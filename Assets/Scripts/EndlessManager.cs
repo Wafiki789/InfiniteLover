@@ -166,13 +166,28 @@ public class EndlessManager : MonoBehaviour {
             float randomGapTime = Random.Range(0, 100);
 
             if (randomGapTime < smallGapTime) {
-                randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1f);
+                if (timeAdjustment + minTimeBetweenObstacles > 1) {
+                    randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1f + timeAdjustment);
+                }
+                else {
+                    randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1f);
+                }
             }
             else if (randomGapTime < mediumGapTime) {
-                randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1.5f);
+                if (timeAdjustment + minTimeBetweenObstacles > 1.5f) {
+                    randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1.5f + timeAdjustment);
+                }
+                else {
+                    randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, 1.5f);
+                }
             }
             else {
-                randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, maxTimeBetweenObstacles);
+                if (timeAdjustment + minTimeBetweenObstacles > maxTimeBetweenObstacles) {
+                    randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, maxTimeBetweenObstacles + timeAdjustment);
+                }
+                else {
+                    randomGapTime = Random.Range(minTimeBetweenObstacles + timeAdjustment, maxTimeBetweenObstacles);
+                }
             }
             print(timeAdjustment + " " + randomGapTime);
             yield return new WaitForSeconds(randomGapTime);

@@ -25,14 +25,19 @@ public class EndlessManager : MonoBehaviour {
     Queue<GameObject> boulders;
 
     //Probabilities
+    [Range(0,100)]
     public float wasteProbs;
+    [Range(0,100)]
+    public float smallerWallsProbs;
+    [Range(0, 100)]
+    public float smallerSpikesProbs;
+    [Range(0, 100)]
+    public float smallGapTime;
+    [Range(0, 100)]
+    public float mediumGapTime;
+
     public float minTimeBetweenObstacles;
     public float maxTimeBetweenObstacles;
-    public float smallerWallsProbs;
-    public float smallerSpikesProbs;
-
-    public float smallGapTime;
-    public float mediumGapTime;
 
     public Transform startingAnchor;
     private Vector3 startingPos;

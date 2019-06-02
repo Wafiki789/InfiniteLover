@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour {
+    [Range(1,10)]
 	public float startingSpeed;
+    [HideInInspector]
 	public float speed;
+
 	float acceleration = 30;
 	Vector3 pos;
 	public action[] actionWheel;

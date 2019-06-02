@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e631b5b9f5f9a324e9f7d39036cf975b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - boulder: {fileID: 1936414315830488, guid: b2b40db4d7c198b4dbb51572ff1e76e6, type: 3}
+  - wall: {fileID: 1369206124298076, guid: e2be203bda6a2144f88835ba1aeb1b5d, type: 3}
+  - spike: {fileID: 1771309465298348, guid: 57dfc80b63cbb36488c73583127dd3f4, type: 3}
+  - checkPoint: {fileID: 1392007605650634, guid: bd70fa0702e3e33458b8e1cfd8736b4e,
+      type: 3}
+  - goal: {fileID: 4798888121860938990, guid: 37607cb24527c0040b5288879562528a, type: 3}
+  - level: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

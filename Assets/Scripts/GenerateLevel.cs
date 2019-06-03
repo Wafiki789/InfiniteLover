@@ -10,17 +10,23 @@ public class GenerateLevel : MonoBehaviour
     public GameObject checkPoint;
     public GameObject goal;
     public GameObject level;
+    public GameObject platform;
 
     [TextArea(10,10)]
     public string levelString;
 
-    
-
     private float xPos = 11;
+    private float originalyPos = -3;
+    private float yPos;
     Vector3 spawnPos;
+
+    bool isOnPlatform = false;
+
+    int platformCounter;
 
     void Awake()
     {
+        yPos = originalyPos;
         spawnPos = new Vector3(xPos, -3, 0);
         for (int i = 0; i < levelString.Length; i++) {
             if (levelString[i] == 's') {
@@ -33,13 +39,13 @@ public class GenerateLevel : MonoBehaviour
                 Instantiate(boulder, spawnPos, Quaternion.identity, level.transform);
             }
             else if (levelString[i] == ',') {
-                xPos += 1;
+                PushXForward(1);
             }
             else if (levelString[i] == '.') {
-                xPos += 4;
+                PushXForward(4);
             }
             else if (levelString[i] == ';') {
-                xPos += 2;
+                PushXForward(2);
             }
             else if (levelString[i] == 'c') {
                 Instantiate(checkPoint, spawnPos, Quaternion.identity, level.transform);
@@ -47,9 +53,39 @@ public class GenerateLevel : MonoBehaviour
             else if (levelString[i] == 'g') {
                 Instantiate(goal, spawnPos, Quaternion.identity, level.transform);
             }
+            else if (levelString[i] == 'p') {
+
+                /*Branching platforms are an edge-case and could be done manually?
+                 For regular platforms, to adapt the height for the obstacles, maybe put a OnTriggerEnter function on them
+                 and uplift them when they collide.
+
+                After xPos has increased by...
+
+                [] -> end of beginning of alternate platform
+                 */
+                Vector3 platformSpawnPos = new Vector3(xPos + (platform.transform.localScale.x / 2) -0.5f, yPos, 0);
+
+                Instantiate(platform, platformSpawnPos, Quaternion.identity, level.transform);
+                yPos += platform.transform.localScale.y / 2;
+                isOnPlatform = true;
+                platformCounter = (int)platform.transform.localScale.x;
+                //i++;
+            }
 
 
-            spawnPos = new Vector3(xPos, -3, 0);
+            spawnPos = new Vector3(xPos, yPos, 0);
+        }
+    }
+
+    void PushXForward(int xUnits) {
+        xPos += xUnits;
+
+        if (isOnPlatform) {
+            platformCounter -= xUnits;
+            if (platformCounter <= 0) {
+                isOnPlatform = false;
+                yPos = originalyPos;
+            }
         }
     }
 }

@@ -28,6 +28,7 @@ public class GenerateLevel : MonoBehaviour
     {
         yPos = originalyPos;
         spawnPos = new Vector3(xPos, yPos, 0);
+
         for (int i = 0; i < levelString.Length; i++) {
             if (levelString[i] == 's') {
                 Instantiate(spike, spawnPos, Quaternion.identity, level.transform);
@@ -60,19 +61,21 @@ public class GenerateLevel : MonoBehaviour
                 [] -> end of beginning of alternate platform
                  */
 
-
-                //Vector3 platformSpawnPos = new Vector3(xPos + (platform.transform.localScale.x / 2) -0.5f, yPos, 0);
-
                 Instantiate(platform, spawnPos, Quaternion.identity, level.transform);
                 //yPos += platform.transform.localScale.y;
                 yPos += 2;
                 isOnPlatform = true;
                 //platformCounter = (int)platform.transform.localScale.x;
                 platformCounter = 10;
+                spawnPos = new Vector3(xPos, yPos, 0);
+
             }
             else if (char.IsDigit(levelString, i)) {
                 int objectAmount = (int)char.GetNumericValue(levelString[i]);
                 GameObject objectType = null;
+                float distanceBetweenObjects = 0.5f;
+
+                bool isAPlatform = false;
 
                 if (levelString[i + 1] == 's') {
                     objectType = spike;
@@ -80,17 +83,28 @@ public class GenerateLevel : MonoBehaviour
                 else if (levelString[i + 1] == 'w') {
                     objectType = wall;
                 }
+                else if (levelString[i + 1] == 'p') {
+                    objectType = platform;
+                    distanceBetweenObjects = 10;
+                    isAPlatform = true;
+                }
+
+                float xOrigin = spawnPos.x;
 
                 for (int j = 0; j < objectAmount; j++) {
                     Instantiate(objectType, spawnPos, Quaternion.identity, level.transform);
-                    PushXForward(0.5f);
+                    PushXForward(distanceBetweenObjects);
+                }
+
+                if (isAPlatform) {
+                    platformCounter = 10 * objectAmount;
+                    isOnPlatform = true;
+                    yPos += 2;
+                    spawnPos = new Vector3(xOrigin, yPos, 0);
                 }
 
                 i++;
             }
-
-
-            //spawnPos = new Vector3(xPos, yPos, 0);
         }
     }
 

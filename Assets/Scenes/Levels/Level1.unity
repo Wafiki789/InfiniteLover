@@ -203,12 +203,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e631b5b9f5f9a324e9f7d39036cf975b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boulder: {fileID: 1936414315830488, guid: b2b40db4d7c198b4dbb51572ff1e76e6, type: 3}
-  wall: {fileID: 1369206124298076, guid: e2be203bda6a2144f88835ba1aeb1b5d, type: 3}
-  spike: {fileID: 1771309465298348, guid: 57dfc80b63cbb36488c73583127dd3f4, type: 3}
+  boulder: {fileID: 2165425647910245476, guid: b2232314f5a62df468ff0d8f82e3d3c3, type: 3}
+  wall: {fileID: 6166104842826939440, guid: 4f563176c27235e47b190d2a5355a554, type: 3}
+  spike: {fileID: 5479134151233706444, guid: bd92bda0b2719b644ac9ef8b223f4ac4, type: 3}
   checkPoint: {fileID: 1392007605650634, guid: bd70fa0702e3e33458b8e1cfd8736b4e, type: 3}
   goal: {fileID: 4798888121860938990, guid: 37607cb24527c0040b5288879562528a, type: 3}
   level: {fileID: 426538613}
+  platform: {fileID: 3870648602426706939, guid: 0cc5c78a9afb1be49a4be4c32da78a39,
+    type: 3}
   levelString: 's...w...s...w...s...w..s..w..s..w..s.;w.;s.;w.;c
 
     ..;s..w..s..w.;s.;w.;s..;w..;s..w..s..;w..;s.;w.;s...w..g'

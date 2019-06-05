@@ -288,6 +288,30 @@ PrefabInstance:
 
         ..;s..;s..;w..;s..;w...s..g'
       objectReference: {fileID: 0}
+    - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: boulder
+      value: 
+      objectReference: {fileID: 2165425647910245476, guid: b2232314f5a62df468ff0d8f82e3d3c3,
+        type: 3}
+    - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 6166104842826939440, guid: 4f563176c27235e47b190d2a5355a554,
+        type: 3}
+    - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: spike
+      value: 
+      objectReference: {fileID: 5479134151233706444, guid: bd92bda0b2719b644ac9ef8b223f4ac4,
+        type: 3}
+    - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 3870648602426706939, guid: 0cc5c78a9afb1be49a4be4c32da78a39,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}
 --- !u!4 &354458530 stripped

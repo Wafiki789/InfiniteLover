@@ -10,7 +10,7 @@ public class FloorCollider : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider coll){
-		Debug.Log ("Hit");
+		//Debug.Log ("Hit");
 		GameObject collGameObject = coll.gameObject;
 		if (collGameObject.name == "Protagonist") {
 			gameOver ();

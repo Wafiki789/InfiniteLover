@@ -22,7 +22,7 @@ public class GenerateLevel : MonoBehaviour
 
     bool isOnPlatform = false;
 
-    int platformCounter;
+    float platformCounter;
 
     void Awake()
     {
@@ -56,10 +56,6 @@ public class GenerateLevel : MonoBehaviour
             else if (levelString[i] == 'p') {
 
                 /*Branching platforms are an edge-case and could be done manually?
-                 For regular platforms, to adapt the height for the obstacles, maybe put a OnTriggerEnter function on them
-                 and uplift them when they collide.
-
-                After xPos has increased by...
 
                 [] -> end of beginning of alternate platform
                  */
@@ -74,13 +70,31 @@ public class GenerateLevel : MonoBehaviour
                 //platformCounter = (int)platform.transform.localScale.x;
                 platformCounter = 10;
             }
+            else if (char.IsDigit(levelString, i)) {
+                int objectAmount = (int)char.GetNumericValue(levelString[i]);
+                GameObject objectType = null;
+
+                if (levelString[i + 1] == 's') {
+                    objectType = spike;
+                }
+                else if (levelString[i + 1] == 'w') {
+                    objectType = wall;
+                }
+
+                for (int j = 0; j < objectAmount; j++) {
+                    Instantiate(objectType, spawnPos, Quaternion.identity, level.transform);
+                    PushXForward(0.5f);
+                }
+
+                i++;
+            }
 
 
-            spawnPos = new Vector3(xPos, yPos, 0);
+            //spawnPos = new Vector3(xPos, yPos, 0);
         }
     }
 
-    void PushXForward(int xUnits) {
+    void PushXForward(float xUnits) {
         xPos += xUnits;
 
         if (isOnPlatform) {
@@ -90,5 +104,6 @@ public class GenerateLevel : MonoBehaviour
                 yPos = originalyPos;
             }
         }
+        spawnPos = new Vector3(xPos, yPos, 0);
     }
 }

@@ -100,7 +100,8 @@ public class GenerateLevel : MonoBehaviour
                     platformCounter = 10 * objectAmount;
                     isOnPlatform = true;
                     yPos += 2;
-                    spawnPos = new Vector3(xOrigin, yPos, 0);
+                    xPos = xOrigin;
+                    spawnPos = new Vector3(xPos, yPos, 0);
                 }
 
                 i++;

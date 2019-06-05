@@ -16,7 +16,7 @@ public class GenerateLevel : MonoBehaviour
     public string levelString;
 
     private float xPos = 11;
-    private float originalyPos = -3;
+    private float originalyPos = -4;
     private float yPos;
     Vector3 spawnPos;
 
@@ -27,7 +27,7 @@ public class GenerateLevel : MonoBehaviour
     void Awake()
     {
         yPos = originalyPos;
-        spawnPos = new Vector3(xPos, -3, 0);
+        spawnPos = new Vector3(xPos, yPos, 0);
         for (int i = 0; i < levelString.Length; i++) {
             if (levelString[i] == 's') {
                 Instantiate(spike, spawnPos, Quaternion.identity, level.transform);
@@ -63,13 +63,16 @@ public class GenerateLevel : MonoBehaviour
 
                 [] -> end of beginning of alternate platform
                  */
-                Vector3 platformSpawnPos = new Vector3(xPos + (platform.transform.localScale.x / 2) -0.5f, yPos, 0);
 
-                Instantiate(platform, platformSpawnPos, Quaternion.identity, level.transform);
-                yPos += platform.transform.localScale.y / 2;
+
+                //Vector3 platformSpawnPos = new Vector3(xPos + (platform.transform.localScale.x / 2) -0.5f, yPos, 0);
+
+                Instantiate(platform, spawnPos, Quaternion.identity, level.transform);
+                //yPos += platform.transform.localScale.y;
+                yPos += 2;
                 isOnPlatform = true;
-                platformCounter = (int)platform.transform.localScale.x;
-                //i++;
+                //platformCounter = (int)platform.transform.localScale.x;
+                platformCounter = 10;
             }
 
 

@@ -238,13 +238,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6dd0e025a0f821498748c623591dd34, type: 3}
---- !u!1 &881255367 stripped
+--- !u!1 &1070909046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1703003386408824, guid: fdc0c3f8cead64446b72f9626b0d19dd,
     type: 3}
-  m_PrefabInstance: {fileID: 1975454036}
+  m_PrefabInstance: {fileID: 1806787642}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1975454036
+--- !u!1001 &1806787642
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -316,19 +316,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
-      propertyPath: platform
-      value: 
-      objectReference: {fileID: 3870648602426706939, guid: 0cc5c78a9afb1be49a4be4c32da78a39,
-        type: 3}
-    - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
-        type: 3}
       propertyPath: levelString
-      value: p,w..;pw..;s.;w..s..;w..;s..;s..;w..;s..;p..;w..;c
+      value: 100p..;w..;w..;s.;w..s..;w..;s..;s..;w..;s..;p..;w..;c
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: level
       value: 
-      objectReference: {fileID: 881255367}
+      objectReference: {fileID: 1070909046}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}

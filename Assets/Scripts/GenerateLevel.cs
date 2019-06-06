@@ -71,19 +71,30 @@ public class GenerateLevel : MonoBehaviour
 
             }
             else if (char.IsDigit(levelString, i)) {
-                int objectAmount = (int)char.GetNumericValue(levelString[i]);
+                int digits = 1;
+                for (int j = 0; j < levelString.Length; j++) {
+                    if (char.IsDigit(levelString, j + 1)) {
+                        digits++;
+                    }
+                    else {
+                        break;
+                    }
+                }
+
+                int objectAmount = int.Parse(levelString.Substring(i, digits));
+
                 GameObject objectType = null;
                 float distanceBetweenObjects = 0.5f;
 
                 bool isAPlatform = false;
 
-                if (levelString[i + 1] == 's') {
+                if (levelString[i + digits] == 's') {
                     objectType = spike;
                 }
-                else if (levelString[i + 1] == 'w') {
+                else if (levelString[i + digits] == 'w') {
                     objectType = wall;
                 }
-                else if (levelString[i + 1] == 'p') {
+                else if (levelString[i + digits] == 'p') {
                     objectType = platform;
                     distanceBetweenObjects = 10;
                     isAPlatform = true;
@@ -104,7 +115,7 @@ public class GenerateLevel : MonoBehaviour
                     spawnPos = new Vector3(xPos, yPos, 0);
                 }
 
-                i++;
+                i += digits;
             }
         }
     }

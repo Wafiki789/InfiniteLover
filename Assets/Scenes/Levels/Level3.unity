@@ -317,7 +317,7 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: 100p..;w..;w..;s.;w..s..;w..;s..;s..;w..;s..;p..;w..;c
+      value: 10p..;w..;w..;s.;w..s..;w..;s..;s..;w..;s.10p..;w..;c
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}

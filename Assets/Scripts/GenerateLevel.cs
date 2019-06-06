@@ -102,17 +102,24 @@ public class GenerateLevel : MonoBehaviour
 
                 float xOrigin = spawnPos.x;
 
-                for (int j = 0; j < objectAmount; j++) {
-                    Instantiate(objectType, spawnPos, Quaternion.identity, level.transform);
-                    PushXForward(distanceBetweenObjects);
-                }
-
                 if (isAPlatform) {
+                    for (int j = 0; j < objectAmount; j++) {
+                        Instantiate(objectType, spawnPos, Quaternion.identity, level.transform);
+                        xPos += distanceBetweenObjects;
+                        spawnPos = new Vector3(xPos, yPos, 0);
+                    }
+
                     platformCounter = 10 * objectAmount;
                     isOnPlatform = true;
                     yPos += 2;
                     xPos = xOrigin;
                     spawnPos = new Vector3(xPos, yPos, 0);
+                }
+                else {
+                    for (int j = 0; j < objectAmount; j++) {
+                        Instantiate(objectType, spawnPos, Quaternion.identity, level.transform);
+                        PushXForward(distanceBetweenObjects);
+                    }
                 }
 
                 i += digits;

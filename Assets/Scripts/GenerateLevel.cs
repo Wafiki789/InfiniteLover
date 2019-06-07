@@ -73,7 +73,7 @@ public class GenerateLevel : MonoBehaviour
             else if (char.IsDigit(levelString, i)) {
                 int digits = 1;
                 for (int j = 0; j < levelString.Length; j++) {
-                    if (char.IsDigit(levelString, j + 1)) {
+                    if (char.IsDigit(levelString, i + j + 1)) {
                         digits++;
                     }
                     else {

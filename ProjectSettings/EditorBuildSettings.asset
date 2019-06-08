@@ -5,28 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SplashScreen.unity
-    guid: 27a6d3cbfab1e2944855887ed3faff94
-  - enabled: 0
-    path: Assets/Scenes/instructionsScreen.unity
-    guid: a61e5d932c5a1d647a95f5c050c16c3e
-  - enabled: 0
-    path: Assets/Scenes/OldLevels/originalLevel1.unity
-    guid: 9f3318da4cbebce4d9f905b4c674f28f
-  - enabled: 0
-    path: Assets/Scenes/OldLevels/originalLevel2.unity
-    guid: a2251b70b70edad4e84773addf525903
-  - enabled: 0
-    path: Assets/Scenes/OldLevels/originalLevel3.unity
-    guid: be0b3ca6ee986fa47a24043aaa7d9bb7
-  - enabled: 0
-    path: Assets/Scenes/endingScreen.unity
-    guid: c3566a1bd7c1c364497ee4c6500f96f6
-  - enabled: 0
-    path: Assets/Scenes/OldLevels/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Gyms/JumpSlideInfiniteGym.unity
-    guid: 8f8a2b163ec9b3d4393e79e51655ace2
+    path: Assets/Scenes/Levels/World 1/Level1.unity
+    guid: 462271634f30a16428e0ce7da9e53aeb
+  - enabled: 1
+    path: Assets/Scenes/Levels/World 1/Level2.unity
+    guid: 27b7933951f44fe49a826b8fa337fe49
+  - enabled: 1
+    path: Assets/Scenes/Levels/World 1/Level3.unity
+    guid: 11493bb9256dfe34db0137c5370e294c
+  - enabled: 1
+    path: Assets/Scenes/Levels/World 1/Level4.unity
+    guid: b717aef4fef377347a6ee99a41bfb090
   m_configObjects: {}

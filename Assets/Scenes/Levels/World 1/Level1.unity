@@ -213,7 +213,7 @@ MonoBehaviour:
     type: 3}
   levelString: 's...w...s...w...s...w..s..w..s..w..s.;w.;s.;w.;c
 
-    ..;s..w..s..w.;s.;w.;s..;w..;s..w..s..;w..;s.;w.;s...w..g'
+    ..;s..w..s..w.;s.;w.;s..;w..;s..w..s..;w..;s.;w.;s...w..'
 --- !u!1001 &795276495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -229,12 +229,12 @@ PrefabInstance:
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 271
+      value: 267
       objectReference: {fileID: 0}
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
@@ -280,6 +280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830095550509915296, guid: 37607cb24527c0040b5288879562528a,
+        type: 3}
+      propertyPath: nextLevel
+      value: level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37607cb24527c0040b5288879562528a, type: 3}

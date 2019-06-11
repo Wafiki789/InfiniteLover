@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 376.1
+      value: 326.5
       objectReference: {fileID: 0}
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
@@ -379,7 +379,11 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: "10p..;w..;s..w..;s..w..s...s..;w..;s...7p..;w..;c...\r\ns..;2w..;s.;4w.;s;,6p...w...s.;2w.;s..w..s.....s..;c...\ns...s..;2w..;s...s..4w...2w..;s...s..."
+      value: '8p..w..s.;w..s.;w.;s..;s..w..s..;6p.;w..;c..
+
+        s..2w..s.,4w.,s.;,6p.;w..;s.,2w.,s.;w.;s..;s..;c...
+
+        4s...4s..;2w..;5s...s..4w...2w..;s...5s....'
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}

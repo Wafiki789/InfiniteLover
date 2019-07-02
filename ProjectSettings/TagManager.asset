@@ -11,6 +11,8 @@ TagManager:
   - Spike
   - Wall
   - Boulder
+  - Manager
+  - RendBorder
   layers:
   - Default
   - TransparentFX

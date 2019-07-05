@@ -180,12 +180,17 @@ PrefabInstance:
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[2]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: actionWheel.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -195,7 +200,11 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: s....2p...;b..s...p....;,b..s..,w..,b...;b
+      value: 'w.;s.;b.;w..;p..s..w..b..w..4s.;w..b..s...c
+
+        ..s...w....;b..w.p..s    ...c
+
+        ..p.;s..w..s..b.;b.;b  ... end'
       objectReference: {fileID: 0}
     - target: {fileID: 2571713562363841954, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}

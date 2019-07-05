@@ -300,6 +300,7 @@ public class Protagonist : MonoBehaviour {
 	void shoot(){
         Vector3 bulletPos = transform.position;
         bulletPos.x += transform.localScale.x / 2 + bullet.transform.localScale.x / 2;
+        bulletPos.y += 0.5f;
         Instantiate (bullet, bulletPos, new Quaternion(0,0,0,0));
 		shootSound.Play ();
 	}

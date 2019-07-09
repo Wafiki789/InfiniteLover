@@ -184,12 +184,12 @@ PrefabInstance:
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 238.98
+      value: 198.9
       objectReference: {fileID: 0}
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.53
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
@@ -326,7 +326,22 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: "s..w..b..        ..c\r\n....s..w..s..b..  ..w..b        ..c\n..s..w..b...s;b"
+      value: 's.;w.;b.;c..s..w..;s.,b.w.;b...s;b..b..c..
+
+        s.;w..a..b.;s.;w.;a.;b...b..s..w.a.;s..
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 6121267123131526297, guid: 1ef20246cb258ac4daea833f31546cc2,
+        type: 3}
+    - target: {fileID: 2571713562363841954, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}

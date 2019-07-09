@@ -7,6 +7,7 @@ public class GenerateLevel : MonoBehaviour
     public GameObject boulder;
     public GameObject wall;
     public GameObject spike;
+    public GameObject animal;
     public GameObject checkPoint;
     public GameObject goal;
     public GameObject level;
@@ -38,6 +39,9 @@ public class GenerateLevel : MonoBehaviour
             }
             else if (levelString[i] == 'b') {
                 Instantiate(boulder, spawnPos, Quaternion.identity, level.transform);
+            }
+            else if (levelString[i] == 'a') {
+                Instantiate(animal, spawnPos, Quaternion.identity, level.transform);
             }
             else if (levelString[i] == ',') {
                 PushXForward(1);

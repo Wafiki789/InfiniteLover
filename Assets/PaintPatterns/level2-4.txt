@@ -1,0 +1,24 @@
+Patterns intéressants:
+-s..;,15w...;b.....   (waste 2e jump)
+-s..;5w..s.a.;s..;
+-s..w..a;b
+-s.;w...a;s;b (non)
+-s..w...a;b;,b (très oui)
+
+
+s.;w.;s.;b..s.;a;s;b
+
+
+
+
+
+s..;w..;s..,b..c..s..;,w
+..,s..;a.;,b...;s...s..;a..c..
+.....s..;15w..,s..,b....s..;,15w...;b.....
+s..;w.,s..b...s..,w..s..b...c....;,
+s..;w..,s.;b..;s..;5w..s.a.;s..;w..,s..;,b
+
+
+
+progress:
+s..w..s..b..c..s..w..

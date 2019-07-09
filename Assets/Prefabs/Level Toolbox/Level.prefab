@@ -63,6 +63,7 @@ MonoBehaviour:
   boulder: {fileID: 2165425647910245476, guid: b2232314f5a62df468ff0d8f82e3d3c3, type: 3}
   wall: {fileID: 6166104842826939440, guid: 4f563176c27235e47b190d2a5355a554, type: 3}
   spike: {fileID: 5479134151233706444, guid: bd92bda0b2719b644ac9ef8b223f4ac4, type: 3}
+  animal: {fileID: 6121267123131526297, guid: 1ef20246cb258ac4daea833f31546cc2, type: 3}
   checkPoint: {fileID: 1392007605650634, guid: bd70fa0702e3e33458b8e1cfd8736b4e, type: 3}
   goal: {fileID: 4798888121860938990, guid: 37607cb24527c0040b5288879562528a, type: 3}
   level: {fileID: 0}

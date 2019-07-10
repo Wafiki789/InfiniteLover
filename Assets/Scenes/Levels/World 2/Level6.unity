@@ -328,7 +328,7 @@ PrefabInstance:
       propertyPath: levelString
       value: 'w.;s.;b.;4w..b..w..4s.;w..s..b..w..;p..s...c..
 
-        w..s..b..b..b...w.p..;s..w..s..b..s...w.;b.c..
+        w..s..b..b..b...w.,p..;s..w..s..b..s...w.;b.c..
 
         w..s..;sb...b..4w.;b..w..s..b.;b.;b
 

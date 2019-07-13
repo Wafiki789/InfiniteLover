@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: s..w...a;b;,b
+      value: "s..w..s..b..c..  \ns..10w.;b...s..b..p.;,s.b..4s.5w.s.b.. c.; s..5w..s.a.;s..w...a;b.b..2p.;w.s.,a.;b.;w..s...;w..a;b..p.w..b"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}

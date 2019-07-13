@@ -1,24 +1,31 @@
 Patterns intéressants:
--s..;,15w...;b.....   (waste 2e jump)
--s..;5w..s.a.;s..;
--s..w..a;b
+
+-s..w..s..w (peut-être pas vu que dans phrase complète)
+-s.;w.;s.;b.;s.;w.;s.;b.;s.;w.;s.;w (phrase complète)
+-a.b.b
+-s.;w.;3p.a.b
+-3s.,3s..bs...bs
+-p.w..b
+
+
+
+
+-s..;,15w...;b.....   (waste 2e jump) OK
+-s..b OK (peut-être enlever)
+-p.;,s.b OK
+-s..w...a;b;,b (très oui) OK
+-s..;5w..s.a.;s..; OK
+-4s.5w.s.b OK
+-s..w..a;b OK
+-2p.;w.s.;a.;b.,w OK
+
+
+Non:
+-s.;w.;s.;b..s.;a;s;b
+-a.b
 -s.;w...a;s;b (non)
--s..w...a;b;,b (très oui)
-
-
-s.;w.;s.;b..s.;a;s;b
-
-
-
-
-
-s..;w..;s..,b..c..s..;,w
-..,s..;a.;,b...;s...s..;a..c..
-.....s..;15w..,s..,b....s..;,15w...;b.....
-s..;w.,s..b...s..,w..s..b...c....;,
-s..;w..,s.;b..;s..;5w..s.a.;s..;w..,s..;,b
-
 
 
 progress:
-s..w..s..b..c..s..w..
+s..w..s..b..c..  
+s..10w.;b...s..b..p.;,s.b..4s.5w.s.b.. c.. s..;5w..s.a.;s..w...a;b.b..2p.;w.s.,a.;b.;w..s...;w..a;b..p.w..b

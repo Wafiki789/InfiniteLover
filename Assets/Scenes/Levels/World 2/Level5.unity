@@ -195,8 +195,8 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: "s..,w..,b..s.;w.;b..3p..w.;b.;2p.;,w.;b..c\n...3p..,w...;7p.;w..b..\r;w..b..
-        s.;b..;w.;b.;c\n..s....2p...;b..s...p....;,b..s..,w..,b...;b"
+      value: "s..,w..,b..s.;w.;b..30p..w.;b.;20p.;,w.;b..c\n...30p..,w...;70p.;w..b..\r;w..b..
+        s.;b..;w.;b.;c\n..s....20p...;b..s...10p....;,b..s..,w..,b...;b"
       objectReference: {fileID: 0}
     - target: {fileID: 2571713562363841954, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -293,6 +293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796691419119424836, guid: 37607cb24527c0040b5288879562528a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37607cb24527c0040b5288879562528a, type: 3}

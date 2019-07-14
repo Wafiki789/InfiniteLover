@@ -12,6 +12,7 @@ public class GenerateLevel : MonoBehaviour
     public GameObject goal;
     public GameObject level;
     public GameObject platform;
+    public GameObject floatyPlatform;
 
     [TextArea(10,10)]
     public string levelString;
@@ -59,12 +60,6 @@ public class GenerateLevel : MonoBehaviour
                 Instantiate(goal, spawnPos, Quaternion.identity, level.transform);
             }
             else if (levelString[i] == 'p') {
-
-                /*Branching platforms are an edge-case and could be done manually?
-
-                [] -> end of beginning of alternate platform
-                 */
-
                 Instantiate(platform, spawnPos, Quaternion.identity, level.transform);
                 //yPos += platform.transform.localScale.y;
                 yPos += 2;
@@ -73,6 +68,13 @@ public class GenerateLevel : MonoBehaviour
                 platformCounter = 10;
                 spawnPos = new Vector3(xPos, yPos, 0);
 
+            }
+            else if (levelString[i] == 'f') {
+                Instantiate(floatyPlatform, spawnPos, Quaternion.identity, level.transform);
+                yPos += 2;
+                isOnPlatform = true;
+                platformCounter = 1;
+                spawnPos = new Vector3(xPos, yPos, 0);
             }
             else if (char.IsDigit(levelString, i)) {
                 int digits = 1;
@@ -100,7 +102,12 @@ public class GenerateLevel : MonoBehaviour
                 }
                 else if (levelString[i + digits] == 'p') {
                     objectType = platform;
-                    distanceBetweenObjects = 10;
+                    distanceBetweenObjects = 1;
+                    isAPlatform = true;
+                }
+                else if (levelString[i + digits] == 'f') {
+                    objectType = floatyPlatform;
+                    distanceBetweenObjects = 1;
                     isAPlatform = true;
                 }
 
@@ -113,7 +120,8 @@ public class GenerateLevel : MonoBehaviour
                         spawnPos = new Vector3(xPos, yPos, 0);
                     }
 
-                    platformCounter = 10 * objectAmount;
+                    //platformCounter = objectAmount;
+                    platformCounter = objectAmount;
                     isOnPlatform = true;
                     yPos += 2;
                     xPos = xOrigin;

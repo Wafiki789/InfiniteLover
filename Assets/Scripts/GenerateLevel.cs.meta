@@ -16,6 +16,8 @@ MonoImporter:
   - level: {fileID: 6121267123131526297, guid: 1ef20246cb258ac4daea833f31546cc2, type: 3}
   - platform: {fileID: 3870648602426706939, guid: 0cc5c78a9afb1be49a4be4c32da78a39,
       type: 3}
+  - floatyPlatform: {fileID: 6614675313389334897, guid: 555770cfc440f3d44baed445a15a51a3,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

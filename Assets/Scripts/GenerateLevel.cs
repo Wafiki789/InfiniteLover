@@ -22,6 +22,9 @@ public class GenerateLevel : MonoBehaviour
     private float yPos;
     Vector3 spawnPos;
 
+    private float lastXPos = 0;
+    private float lastYPos = 0;
+
     bool isOnPlatform = false;
 
     float platformCounter;
@@ -75,6 +78,7 @@ public class GenerateLevel : MonoBehaviour
                 isOnPlatform = true;
                 platformCounter = 1;
                 spawnPos = new Vector3(xPos, yPos, 0);
+                lastXPos = xPos;
             }
             else if (char.IsDigit(levelString, i)) {
                 int digits = 1;
@@ -109,6 +113,7 @@ public class GenerateLevel : MonoBehaviour
                     objectType = floatyPlatform;
                     distanceBetweenObjects = 1;
                     isAPlatform = true;
+                    lastXPos = xPos;
                 }
 
                 float xOrigin = spawnPos.x;
@@ -125,6 +130,7 @@ public class GenerateLevel : MonoBehaviour
                     isOnPlatform = true;
                     yPos += 2;
                     xPos = xOrigin;
+                    lastXPos = xOrigin;
                     spawnPos = new Vector3(xPos, yPos, 0);
                 }
                 else {
@@ -136,6 +142,17 @@ public class GenerateLevel : MonoBehaviour
 
                 i += digits;
             }
+            else if (levelString[i] == '[') {
+                lastYPos = yPos;
+                yPos = originalyPos;
+                xPos = lastXPos;
+                spawnPos = new Vector3(xPos, yPos, 0);
+            }
+            else if (levelString[i] == ']') {
+                yPos = lastYPos;
+                spawnPos = new Vector3(xPos, yPos, 0);
+            }
+            print(levelString[i] + " height " + yPos);
         }
     }
 

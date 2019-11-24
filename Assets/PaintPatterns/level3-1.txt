@@ -1,0 +1,18 @@
+Patterns intéressants:
+b.a.;3w.;s OK
+
+26p.b.b.;w.;s...;15pb;,b;,b
+
+b.;b.8w...;s,b.b OK
+
+5p...a;w OK
+
+10f..,10p.,w.52p...[...b.b.s.;b;b.w.3s.b.w.s]
+
+Reg:
+b..b..4w.;s
+
+
+progress:
+b..b..4w.;s..c..b.a.;3w.;5p...a;w..b.;b.8w...;s,b.b..c..
+

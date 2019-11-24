@@ -245,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -260,12 +260,17 @@ PrefabInstance:
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[2]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[0]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: actionWheel.Array.data[3]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -281,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: a..w
+      value: 10p.. 25f....10p..70p
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -307,6 +312,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6121267123131526297, guid: 1ef20246cb258ac4daea833f31546cc2,
         type: 3}
+    - target: {fileID: 2571713562363841954, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571713562363841954, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 23.61081
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}
 --- !u!1001 &1520630001

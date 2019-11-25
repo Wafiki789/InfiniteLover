@@ -17,7 +17,7 @@ public class NextAction : MonoBehaviour{
             GameObject otherObject = other.gameObject;
             if (otherObject.name == "Protagonist"){
                 Protagonist protagonistScript = otherObject.GetComponent<Protagonist>();
-                //protagonistScript.index++;
+                protagonistScript.changeIndex(1);
                 protagonistScript.setAction();
                 symbolScript.changeSymbol();
             }

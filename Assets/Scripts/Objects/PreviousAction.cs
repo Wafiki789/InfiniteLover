@@ -17,7 +17,7 @@ public class PreviousAction : MonoBehaviour {
             GameObject otherObject = other.gameObject;
             if (otherObject.name == "Protagonist"){
                 Protagonist protagonistScript = otherObject.GetComponent<Protagonist>();
-                protagonistScript.index-=2;
+                protagonistScript.changeIndex(-1);
                 protagonistScript.setAction();
 
                 for (int i = 0; i < protagonistScript.actionWheel.Length - 1; i++) {

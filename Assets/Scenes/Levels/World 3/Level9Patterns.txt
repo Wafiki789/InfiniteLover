@@ -1,0 +1,18 @@
+Level 9 patterns:
+Speed: Somewhere between 6.5 and 8 (most probably 7)
+
+Good ones: 
+s.2w..4s//..s.w.,>..s.;s DONE
+s..<..;w..>..s.,w.,s DONE
+s..w..<..s//..s..w..<.s...w..s..
+s..>..4w;,s DONE
+
+Ok: 
+s..>..s...s..6w..<..s DONE
+
+Maybe a level 9 before with just jump + slide?? Too simple?
+
+
+
+s..2w.;s..s..2w.;s..
+s..>..s...s..6w..<..s..c...

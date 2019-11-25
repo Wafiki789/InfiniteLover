@@ -183,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: startingSpeed
-      value: 8
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -203,11 +203,7 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: '
-
-        .................
-
-        s..w..s..s..w..s'
+      value: "s..2w.;s..s..2w.;s..\r\ns..>..s...s..6w..<..s..c...\ns..<..;w..>..s.,w.,s..\ns.2w..4s//..s.w.,>..s.;s..c...\ns..>..4w;,s..\ns..w..<..s//..s..w..<.;s...w..s..\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}
@@ -232,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 238.98
+      value: 362
       objectReference: {fileID: 0}
     - target: {fileID: 4796580865007994160, guid: 37607cb24527c0040b5288879562528a,
         type: 3}
@@ -283,6 +279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830095550509915296, guid: 37607cb24527c0040b5288879562528a,
+        type: 3}
+      propertyPath: nextLevel
+      value: level10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37607cb24527c0040b5288879562528a, type: 3}

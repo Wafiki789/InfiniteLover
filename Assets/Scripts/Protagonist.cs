@@ -315,6 +315,7 @@ public class Protagonist : MonoBehaviour {
 	}
 
 	public void changeAction(){
+        changeIndex(1);
         setAction();
 		symbolScript.changeSymbol ();
 	}
@@ -348,16 +349,28 @@ public class Protagonist : MonoBehaviour {
     }
 
     public void setAction() {
-        if (index < 0) {
+        /*if (index < 0) {
             index = actionWheel.Length - 1;
-        }
+        }*/
 
         print(index);
         activeAction = actionWheel[index];
-        index++;
+        //index++;
+        /*if (index == actionWheel.Length)
+        {
+            index = 0;
+        }*/
+    }
+
+    public void changeIndex(int modification) { 
+        index += modification;
         if (index == actionWheel.Length)
         {
             index = 0;
+        }
+        else if (index < 0)
+        {
+            index = actionWheel.Length - 1;
         }
     }
 }

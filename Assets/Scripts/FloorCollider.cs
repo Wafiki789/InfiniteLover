@@ -9,15 +9,19 @@ public class FloorCollider : MonoBehaviour {
 		protagonistScript = GameObject.Find ("Protagonist").GetComponent<Protagonist>();
 	}
 
-	void OnTriggerEnter(Collider coll){
-		//Debug.Log ("Hit");
-		GameObject collGameObject = coll.gameObject;
-		if (collGameObject.name == "Protagonist") {
-			gameOver ();
-		}
-		else if(collGameObject.tag == "Projectile"){
-			Destroy (collGameObject);
-		}
+    void OnTriggerEnter(Collider coll) {
+        GameObject collGameObject = coll.gameObject;
+        if (collGameObject.name == "Protagonist")
+        {
+            gameOver();
+        }
+        else if (collGameObject.tag == "Projectile")
+        {
+            Destroy(collGameObject);
+        }
+        else if (collGameObject.name.Contains("Floor") || collGameObject.name.Contains("Platform")) {
+            Destroy(GetComponent<FloorCollider>());
+        }
 	}
 
 	void gameOver(){

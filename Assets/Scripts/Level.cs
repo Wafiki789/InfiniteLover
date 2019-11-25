@@ -42,5 +42,6 @@ public class Level : MonoBehaviour {
 
 	public void rewind(){
 		speed = -30;
+        //TODO: Reactivate boulders and next/previous/reverse actions
 	}
 }

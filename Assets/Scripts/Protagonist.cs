@@ -43,7 +43,8 @@ public class Protagonist : MonoBehaviour {
 	GameObject runningSprite;
 	GameObject slidingSprite;
 
-	int [] actionWheel;
+    [HideInInspector]
+	public int [] actionWheel;
 
 	GameObject level;
 	Level levelScript;
@@ -347,6 +348,11 @@ public class Protagonist : MonoBehaviour {
     }
 
     public void setAction() {
+        if (index < 0) {
+            index = actionWheel.Length - 1;
+        }
+
+        print(index);
         activeAction = actionWheel[index];
         index++;
         if (index == actionWheel.Length)

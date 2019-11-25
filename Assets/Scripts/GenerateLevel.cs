@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
-    public GameObject boulder;
-    public GameObject wall;
-    public GameObject spike;
-    public GameObject animal;
-    public GameObject checkPoint;
-    public GameObject goal;
+    public GameObject boulder; //b
+    public GameObject wall; //w
+    public GameObject spike; //s
+    public GameObject animal; //a
+    public GameObject checkPoint; //c
+    public GameObject goal; //g
     public GameObject level;
-    public GameObject platform;
-    public GameObject floatyPlatform;
+    public GameObject platform; //p
+    public GameObject floatyPlatform; //f
+    public GameObject hookshotTarget; //h + the height
 
+    public GameObject nextAction; //>
+    public GameObject previousAction; //<
+    public GameObject reverseActions; //r
+    
     [TextArea(10,10)]
     public string levelString;
 
@@ -79,6 +84,13 @@ public class GenerateLevel : MonoBehaviour
                 platformCounter = 1;
                 spawnPos = new Vector3(xPos, yPos, 0);
                 lastXPos = xPos;
+            }
+            else if (levelString[i] == '<') {
+                Instantiate(previousAction, spawnPos, Quaternion.identity, level.transform);
+            }
+            else if (levelString[i] == '>')
+            {
+                Instantiate(nextAction, spawnPos, Quaternion.identity, level.transform);
             }
             else if (char.IsDigit(levelString, i)) {
                 int digits = 1;
@@ -152,7 +164,7 @@ public class GenerateLevel : MonoBehaviour
                 yPos = lastYPos;
                 spawnPos = new Vector3(xPos, yPos, 0);
             }
-            print(levelString[i] + " height " + yPos);
+            //print(levelString[i] + " height " + yPos);
         }
     }
 

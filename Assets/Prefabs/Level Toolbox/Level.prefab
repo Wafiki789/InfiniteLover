@@ -71,6 +71,12 @@ MonoBehaviour:
     type: 3}
   floatyPlatform: {fileID: 6614675313389334897, guid: 555770cfc440f3d44baed445a15a51a3,
     type: 3}
+  hookshotTarget: {fileID: 0}
+  nextAction: {fileID: 2851399351118031503, guid: 123565b0047d47140bab0432c5dc776f,
+    type: 3}
+  previousAction: {fileID: 6915748133140971554, guid: cecc22ac0e10aab4ead3824aea97f1d1,
+    type: 3}
+  reverseActions: {fileID: 0}
   levelString: 
 --- !u!1001 &2567283585296834956
 PrefabInstance:

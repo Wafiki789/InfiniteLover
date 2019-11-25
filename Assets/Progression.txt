@@ -1,0 +1,34 @@
+Opti trick
+
+Patterns:
+Jump slide (encore)
+Jump slide
+Jump slide
+Jump Jump slide
+
+Jump slide shoot
+Slide Jump Shoot
+Jump slide shoot
+Jump slide jump shoot
+
+9: Jump Slide Jump (forward / backward)
+10: Shoot slide jump 
+11: Jump slide jump shoot (branching)
+12: Shoot shoot slide jump (encore)
+
+(hookshot)
+13:
+14:
+15:
+16:
+
+
+Shoot slide jump
+
+
+
+index = something (== ou --)
+changeAction()
+
+//TODO: Reactivate boulders and next/previous/reverse actions
+In Level.cs

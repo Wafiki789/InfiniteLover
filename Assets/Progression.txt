@@ -32,3 +32,12 @@ changeAction()
 
 //TODO: Reactivate boulders and next/previous/reverse actions
 In Level.cs
+
+
+Pour les niveaux durs a la fin:
+s..a;b
+(Quand il y a un jump apres le slide)
+>..w
+
+(Dans un pattern jump slide attack):
+b..a;b

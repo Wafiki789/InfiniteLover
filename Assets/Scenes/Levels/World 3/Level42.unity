@@ -339,7 +339,12 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: b..b..4w.;s..c..b.a.;3w.;5p...a;w..b.;b.8w...;s,b.b..c..
+      value: '5p...a;w..b.;b..5p...a;w..b.;b..5p...a;w..b.;b..5p...a;w..b.;b..5p...a;w..b.;b..5p...a;w..b.;b..5p...a;w..b.;b..
+
+
+
+
+        b..b..4w.;s..c..b.a.;3w.;5p...a;w..b.;b.8w...;s,b.b..c..'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc0c3f8cead64446b72f9626b0d19dd, type: 3}

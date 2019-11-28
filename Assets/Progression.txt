@@ -13,8 +13,8 @@ Jump slide jump shoot
 
 9: Jump Slide Jump (forward / backward)
 10: Shoot slide jump 
-11: Jump slide jump shoot (branching)
-12: Shoot shoot slide jump (encore)
+11: Jump slide jump shoot
+12: Shoot shoot slide jump (branching) (encore)
 
 (hookshot)
 13:
@@ -41,3 +41,8 @@ s..a;b
 
 (Dans un pattern jump slide attack):
 b..a;b
+
+Non utilisés niveau 11 (3-3)
+s.;<.w.s..b...w.<;b..s..;>.w
+Dans le même niveau, début retiré:
+w..<.s.;s..s.<.b.b..;w..<.b..;s..<..b..s..s..a;b..c

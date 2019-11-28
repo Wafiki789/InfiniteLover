@@ -29,6 +29,10 @@ public class GenerateLevel : MonoBehaviour
 
     private float lastXPos = 0;
     private float lastYPos = 0;
+    private float lastPlatformYPos = 0;
+    private float lastFloatyXPos = 0;
+
+    private bool sameHeight = false;
 
     bool isOnPlatform = false;
 
@@ -69,7 +73,7 @@ public class GenerateLevel : MonoBehaviour
             }
             else if (levelString[i] == 'p') {
                 Instantiate(platform, spawnPos, Quaternion.identity, level.transform);
-                //yPos += platform.transform.localScale.y;
+                lastPlatformYPos = yPos;
                 yPos += 2;
                 isOnPlatform = true;
                 //platformCounter = (int)platform.transform.localScale.x;
@@ -79,6 +83,12 @@ public class GenerateLevel : MonoBehaviour
             }
             else if (levelString[i] == 'f') {
                 Instantiate(floatyPlatform, spawnPos, Quaternion.identity, level.transform);
+                lastPlatformYPos = yPos;
+
+                if (!sameHeight) {
+                    lastFloatyXPos = xPos;
+                }
+                
                 yPos += 2;
                 isOnPlatform = true;
                 platformCounter = 1;
@@ -91,6 +101,18 @@ public class GenerateLevel : MonoBehaviour
             else if (levelString[i] == '>')
             {
                 Instantiate(nextAction, spawnPos, Quaternion.identity, level.transform);
+            }
+            else if (levelString[i] == '=') {
+                yPos = lastPlatformYPos;
+                spawnPos = new Vector3(xPos, yPos, 0);
+                sameHeight = true;
+            }
+            else if(levelString[i] == '['){
+                yPos = originalyPos;
+                xPos = lastFloatyXPos;
+            }
+            else if (levelString[i] == ']'){
+                //hum....just for style??
             }
             else if (char.IsDigit(levelString, i)) {
                 int digits = 1;
@@ -120,12 +142,21 @@ public class GenerateLevel : MonoBehaviour
                     objectType = platform;
                     distanceBetweenObjects = 1;
                     isAPlatform = true;
+                    lastPlatformYPos = yPos;
+
                 }
                 else if (levelString[i + digits] == 'f') {
                     objectType = floatyPlatform;
                     distanceBetweenObjects = 1;
                     isAPlatform = true;
                     lastXPos = xPos;
+
+                    lastPlatformYPos = yPos;
+
+                    if (!sameHeight)
+                    {
+                        lastFloatyXPos = xPos;
+                    }
                 }
 
                 float xOrigin = spawnPos.x;
@@ -154,7 +185,7 @@ public class GenerateLevel : MonoBehaviour
 
                 i += digits;
             }
-            else if (levelString[i] == '[') {
+            /*else if (levelString[i] == '[') {
                 lastYPos = yPos;
                 yPos = originalyPos;
                 xPos = lastXPos;
@@ -163,8 +194,7 @@ public class GenerateLevel : MonoBehaviour
             else if (levelString[i] == ']') {
                 yPos = lastYPos;
                 spawnPos = new Vector3(xPos, yPos, 0);
-            }
-            //print(levelString[i] + " height " + yPos);
+            }*/
         }
     }
 
@@ -176,6 +206,7 @@ public class GenerateLevel : MonoBehaviour
             if (platformCounter <= 0) {
                 isOnPlatform = false;
                 yPos = originalyPos;
+                sameHeight = false;
             }
         }
         spawnPos = new Vector3(xPos, yPos, 0);

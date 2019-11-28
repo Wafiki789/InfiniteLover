@@ -1,22 +1,32 @@
 Don't forget cats!
+And cats on platforms!
 
 
 Ok:
-w..<.s.;s
+w..<.s.;s OK
+s..s..a;b OK
+s..w..s.a.;b OK
 
 Bon:
-s.s.;>.w
-s..s.<.b.b
-s..w..s..b.>.s.>.4w
-s.;<.w.s..b
+s.s.;>.w OK
+s..s.<.b.b OK
+s..w..s..b.>.s.>.4w OK
+s.;<.w.s..b OK
 
-
-w..<.b
-w.<;b
+w..<.b OK
+w.<;b OK
 
 Hardcore:
-s..w.;>.w;,s
-s..<..b
+s..w.;>.w;,s OK
+s..<..b OK
+s..w.,>.a;b.;b OK
+s..3w.;3s.b.;<.a. (commencer prochain pattern par un jump) OK
 
 Avant la fin:
 s..;>.w
+
+Non-utilisés:
+s.;<.w.s..b...w.<;b..s..;>.w
+
+Maladroite:
+w..<.s.;s..s.<.b.b..;w..<.b..;s..<..b..s..s..a;b..c

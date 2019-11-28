@@ -23,7 +23,6 @@ public class CheckPoint : MonoBehaviour {
 
 	void OnTriggerEnter(Collider coll){
 		if (protagonistScript.respawning && coll.gameObject.name == "Protagonist") {
-			Debug.Log ("Stop");
 			levelScript.speed = 0;
 			protagonistScript.goingDown = true;
 			protagonistScript.index = 0;

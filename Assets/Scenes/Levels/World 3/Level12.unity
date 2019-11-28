@@ -268,26 +268,27 @@ PrefabInstance:
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[0]
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[1]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: actionWheel.Array.data[3]
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
+        type: 3}
+      propertyPath: actionWheel.Array.data[2]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: 's.;w.;s.;b..c...
-
-        s..w..s..b.>.;,s..>.4w.,b..s..w..s.a.;b..s..w.>;,w.,s..c
-
-        ..s..3w.;3s.b.;<.a..s.s.;>.w..b..s..w.,>.a;b.;b'
+      value: 10p..35f.........;,=35f[...b..b..w..s....b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..]
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}

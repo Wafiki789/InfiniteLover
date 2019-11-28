@@ -349,17 +349,7 @@ public class Protagonist : MonoBehaviour {
     }
 
     public void setAction() {
-        /*if (index < 0) {
-            index = actionWheel.Length - 1;
-        }*/
-
-        print(index);
         activeAction = actionWheel[index];
-        //index++;
-        /*if (index == actionWheel.Length)
-        {
-            index = 0;
-        }*/
     }
 
     public void changeIndex(int modification) { 

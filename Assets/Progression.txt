@@ -46,3 +46,8 @@ Non utilisés niveau 11 (3-3)
 s.;<.w.s..b...w.<;b..s..;>.w
 Dans le même niveau, début retiré:
 w..<.s.;s..s.<.b.b..;w..<.b..;s..<..b..s..s..a;b..c
+
+
+shoot shoot slide jump:
+18p...;,b..;s.8fa
+>.b.>;,b..w.s

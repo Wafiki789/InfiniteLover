@@ -1,0 +1,57 @@
+Level 12 patterns
+
+Great:
+OK 15p..;b;,a.;w
+OK b.<.b.<;a.,w
+OK b..b.>.s.a
+OK b..b..w...>.18p
+
+OK b.>.>;,b..w.s
+OK b.>.b..5w;,3s
+
+OK b.<.a.;b..2w;,2s
+
+b.b.4w.b;,a;,b
+OK .12p,b (puis normal) OU .12p,b..w..s
+OK 10p.b;,b..;,10p (plus tôt dans le niveau)
+
+
+OK b.;b.w..b.w
+
+OK b;,<;,a;,b.a.2w;,2s
+
+
+OK 12p..;35f..b.;b.b;,4s....=35f
+
+
+Regulars:
+OK b.;s
+
+
+First part:
+b.;b.;2w.;s..b.;b.w..b.w..10p.b;,b..;,10p....
+b.>.b..5w;,3s...;12p,b..w..s..c
+
+Second part:
+12p..;35f..b.;b.b;,4s.;3w;..=35f.b.<.b.<;a.,w
+[...b.;b.4w.;b..b..b.b..b.;w]
+.....b.>.>;,b..w.s..c
+
+Third part:
+b.;s..w.;15p..;b;,a.;,w...b.<.a.;b..2w;,2s..
+b.b.4w.b;,a;,b...b..b..w...>.18p.....b..b.>.s.a..
+b;,<;,a.b.a.,2w;,2s
+
+Abandonné:
+10p.b;,b...;10pa (plus tard)
+
+
+b.;b.;2w.;s..b.;b.w..b.w..10p.b;,b..;,10p....
+b.>.b..5w;,3s...;12p,b..w..;s..c....
+12p..;35f..b.;b.b;,4s.;3w;..=35f.b.<.b.<;a.,w
+[...b.;b.4w.;b..b..b.b..b.;w]
+.....b.>.>;,b..w.s..c..
+b..b..w...>.;5p...b.;s..w.;15p..;b;,a.;,w...
+b.<.a.;b..2w;,2s..
+b.b.4w.,b;,a.b...b..b.>.s.a..
+b;,<;,a.b.a.,2w;,2s

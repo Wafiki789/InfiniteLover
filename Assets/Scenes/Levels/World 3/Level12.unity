@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: startingSpeed
-      value: 6.5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114232724344962854, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
@@ -288,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}
       propertyPath: levelString
-      value: 10p..35f.........;,=35f[...b..b..w..s....b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..b..b..w..s..]
+      value: "b.;b.;2w.;s..b.;b.w..b.w..10p.b;,b..;,10p....\r\nb.>.b..5w;,3s...;12p,b..w..;s..c....\r\n12p..;35f..b.;b.b;,4s.;3w;..=35f.b.<.b.<;a.,w\r\n[...b.;b.4w.;b..b..b.b..b.;w]\r\n.....b.>.>;,b..w.s..c..\r\nb..b..w...>.;5p...b.;s..w.;15p..;b;,a.;,w...\r\nb.<.a.;b..2w;,2s..\r\nb.b.4w.,b;,a.b...b..b.>.s.a..\r\nb;,<;,a.b.a.,2w;,2s"
       objectReference: {fileID: 0}
     - target: {fileID: 5831412263432426149, guid: fdc0c3f8cead64446b72f9626b0d19dd,
         type: 3}

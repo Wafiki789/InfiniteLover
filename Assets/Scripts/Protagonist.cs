@@ -143,9 +143,7 @@ public class Protagonist : MonoBehaviour {
 			else if (Input.GetKeyDown (KeyCode.S)) {
 				goalScript.loadNextLevel ();
 			}
-
-            //Key pressed: what action is made?
-            if (Input.GetKeyDown (KeyCode.Space) && !pause && !respawning) {
+            else if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.RightArrow)) && !pause && !respawning) {
 				switch (activeAction) {
 				case 0: //jump
 					if (grounded) {
@@ -174,7 +172,7 @@ public class Protagonist : MonoBehaviour {
 			}
 
             //Key released: reset states + make the jump minimal if applicable
-			if (Input.GetKeyUp (KeyCode.Space)) {
+			if (Input.GetKeyUp (KeyCode.Space) || Input.GetKeyUp(KeyCode.RightArrow)) {
 				runningSprite.SetActive (true);
 				slidingSprite.SetActive (false);
 

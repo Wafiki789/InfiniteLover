@@ -13,11 +13,16 @@ MonoImporter:
   - checkPoint: {fileID: 1392007605650634, guid: bd70fa0702e3e33458b8e1cfd8736b4e,
       type: 3}
   - goal: {fileID: 4798888121860938990, guid: 37607cb24527c0040b5288879562528a, type: 3}
+  - love: {fileID: 7474833535965771973, guid: 0b2018d1f546e144c9f203ad5f512782, type: 3}
   - level: {fileID: 6121267123131526297, guid: 1ef20246cb258ac4daea833f31546cc2, type: 3}
   - platform: {fileID: 3870648602426706939, guid: 0cc5c78a9afb1be49a4be4c32da78a39,
       type: 3}
   - floatyPlatform: {fileID: 6614675313389334897, guid: 555770cfc440f3d44baed445a15a51a3,
       type: 3}
+  - hookshotTarget: {instanceID: 0}
+  - nextAction: {instanceID: 0}
+  - previousAction: {instanceID: 0}
+  - reverseActions: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
